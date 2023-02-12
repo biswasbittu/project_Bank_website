@@ -12,5 +12,12 @@ document.getElementById("btn-withdrow").addEventListener('click',function(){
     withdrowTotalElement.innerText=currentWithdrowTotal;
 
 
+    const balenceTotalElement=document.getElementById('balence-total');
+    const previousBalenceTotalstring=balenceTotalElement.innerText;
+    const previousBalenceTotal=parseFloat(previousBalenceTotalstring);
+
+    const currentTotalBalence=previousBalenceTotal-newWitdrowAmount;
+         balenceTotalElement.innerText=currentTotalBalence;
+
     withdrowField.value="";
 })
