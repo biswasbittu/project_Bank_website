@@ -8,13 +8,21 @@ document.getElementById("btn-withdrow").addEventListener('click',function(){
     const withdrowTotalElement=document.getElementById('withdrow-total');
     const previouswithdrowTotalString=withdrowTotalElement.innerText;
     const previouswithdrowTotal=parseFloat(previouswithdrowTotalString);
+    
+    
+    const balenceTotalElement=document.getElementById('balence-total');
+    const previousBalenceTotalstring=balenceTotalElement.innerText;
+    const previousBalenceTotal=parseFloat(previousBalenceTotalstring);
+    
+    if( newWitdrowAmount>previousBalenceTotal){
+        alert('Not Ablavel Balence in your account');
+        return;
+    }
+
     const currentWithdrowTotal=previouswithdrowTotal+newWitdrowAmount;
     withdrowTotalElement.innerText=currentWithdrowTotal;
 
 
-    const balenceTotalElement=document.getElementById('balence-total');
-    const previousBalenceTotalstring=balenceTotalElement.innerText;
-    const previousBalenceTotal=parseFloat(previousBalenceTotalstring);
 
     const currentTotalBalence=previousBalenceTotal-newWitdrowAmount;
          balenceTotalElement.innerText=currentTotalBalence;
