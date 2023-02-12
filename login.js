@@ -18,4 +18,7 @@ document.getElementById('btn-submit').addEventListener('click', function () {
     else {
         alert('Invalid Password');
     }
+
+    emailField.value="";
+    passwordField.value="";
 })
